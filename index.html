@@ -112,14 +112,65 @@ border-radius:10px;
   box-shadow:0 0 20px #39ff14;
 }
 
-.tag{
-  display:inline-block;
-  padding:5px 10px;
-  margin:5px 5px 0 0;
-  font-size:12px;
+  .tag{
+    display:inline-block;
+    padding:5px 10px;
+    margin:5px 5px 0 0;
+    font-size:12px;
+    border:1px solid #39ff14;
+    border-radius:8px;
+    color:#39ff14;
+  }
+
+/* ===== ADVANCED UI ===== */
+
+body{
+  background: radial-gradient(circle at top, #0a0a0a, black);
+  overflow-x:hidden;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+/* animated glow background */
+body::before{
+  content:"";
+  position:fixed;
+  top:-50%;
+  left:-50%;
+  width:200%;
+  height:200%;
+  background:radial-gradient(circle, rgba(57,255,20,0.08), transparent 40%);
+  animation:floatGlow 8s infinite alternate;
+  pointer-events:none;
+}
+
+@keyframes floatGlow{
+  from{transform:translate(0,0);}
+  to{transform:translate(100px,50px);}
+}
+
+.filter-bar{
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.filter-btn{
+  background:transparent;
   border:1px solid #39ff14;
-  border-radius:8px;
   color:#39ff14;
+  padding:10px 15px;
+  margin:5px;
+  cursor:pointer;
+  border-radius:8px;
+  transition:0.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active{
+  background:#39ff14;
+  color:black;
 }
 
 </style>
@@ -152,13 +203,19 @@ automation systems, and cool futuristic apps.
 <section class="projects">
 
 <h2>Projects</h2>
+<div class="filter-bar">
+  <button class="filter-btn active" onclick="filterProjects('all')">All</button>
+  <button class="filter-btn" onclick="filterProjects('AI')">AI</button>
+  <button class="filter-btn" onclick="filterProjects('Web')">Web</button>
+  <button class="filter-btn" onclick="filterProjects('Automation')">Automation</button>
+</div>
 
 <div class="project-section">
 
   <h3>AI Projects</h3>
   <div class="projects-grid">
 
-    <div class="card">
+    <div class="card" data-category="AI">
       <h3>AI Productivity Assistant</h3>
       <p>
         A productivity assistant built using FastAPI,
@@ -182,7 +239,7 @@ automation systems, and cool futuristic apps.
   <h3>Web Projects</h3>
   <div class="projects-grid">
 
-    <div class="card">
+    <div class="card" data-category="Web">
       <h3>Portfolio Website</h3>
       <p>
         A personal portfolio website built using HTML and CSS.
@@ -204,7 +261,7 @@ automation systems, and cool futuristic apps.
   <h3>Automation Projects</h3>
   <div class="projects-grid">
 
-    <div class="card">
+    <div class="card" data-category="Automation">
       <h3>Automation System</h3>
       <p>
         Scripts and tools for automating daily tasks.
@@ -222,7 +279,26 @@ automation systems, and cool futuristic apps.
   </div>
 </div>
 
-</section>
+ </section>
+
+<script>
+function filterProjects(category){
+  let cards = document.querySelectorAll('.card');
+  let buttons = document.querySelectorAll('.filter-btn');
+
+  buttons.forEach(btn => btn.classList.remove('active'));
+
+  event.target.classList.add('active');
+
+  cards.forEach(card => {
+    if(category === 'all' || card.dataset.category === category){
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+</script>
 
 </body>
 
