@@ -90,6 +90,38 @@ text-decoration:none;
 border-radius:10px;
 }
 
+.projects-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+  gap:20px;
+}
+
+.project-section h3{
+  color:#39ff14;
+  text-align:center;
+  margin-top:50px;
+  font-size:24px;
+}
+
+.card{
+  transition:0.3s ease;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 0 20px #39ff14;
+}
+
+.tag{
+  display:inline-block;
+  padding:5px 10px;
+  margin:5px 5px 0 0;
+  font-size:12px;
+  border:1px solid #39ff14;
+  border-radius:8px;
+  color:#39ff14;
+}
+
 </style>
 
 </head>
@@ -121,41 +153,73 @@ automation systems, and cool futuristic apps.
 
 <h2>Projects</h2>
 
-<h3 style="color:#39ff14; text-align:center; margin-top:40px;">AI Projects</h3>
+<div class="project-section">
 
-<div class="card">
-  <h3>AI Productivity Assistant</h3>
-  <p>
-    A productivity assistant built using FastAPI,
-    Neo4j, and WebSockets.
-  </p>
-  <a href="https://github.com/ridipgiri">
-    GitHub Repo
-  </a>
+  <h3>AI Projects</h3>
+  <div class="projects-grid">
+
+    <div class="card">
+      <h3>AI Productivity Assistant</h3>
+      <p>
+        A productivity assistant built using FastAPI,
+        Neo4j, and WebSockets.
+      </p>
+      <a href="https://github.com/ridipgiri">GitHub Repo</a>
+
+      <div>
+        <span class="tag">FastAPI</span>
+        <span class="tag">Neo4j</span>
+        <span class="tag">WebSockets</span>
+        <span class="tag">AI</span>
+      </div>
+    </div>
+
+  </div>
 </div>
 
-<h3 style="color:#39ff14; text-align:center; margin-top:60px;">Web Projects</h3>
+<div class="project-section">
 
-<div class="card">
-  <h3>Portfolio Website</h3>
-  <p>
-    A personal portfolio website built using HTML and CSS.
-  </p>
-  <a href="https://github.com/ridipgiri">
-    GitHub Repo
-  </a>
+  <h3>Web Projects</h3>
+  <div class="projects-grid">
+
+    <div class="card">
+      <h3>Portfolio Website</h3>
+      <p>
+        A personal portfolio website built using HTML and CSS.
+      </p>
+      <a href="https://github.com/ridipgiri">GitHub Repo</a>
+
+      <div>
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">Portfolio</span>
+      </div>
+    </div>
+
+  </div>
 </div>
 
-<h3 style="color:#39ff14; text-align:center; margin-top:60px;">Automation Projects</h3>
+<div class="project-section">
 
-<div class="card">
-  <h3>Automation System</h3>
-  <p>
-    Scripts and tools for automating daily tasks.
-  </p>
-  <a href="https://github.com/ridipgiri">
-    GitHub Repo
-  </a>
+  <h3>Automation Projects</h3>
+  <div class="projects-grid">
+
+    <div class="card">
+      <h3>Automation System</h3>
+      <p>
+        Scripts and tools for automating daily tasks.
+      </p>
+      <a href="https://github.com/ridipgiri">GitHub Repo</a>
+
+      <div>
+        <span class="tag">Python</span>
+        <span class="tag">Automation</span>
+        <span class="tag">Scripts</span>
+        <span class="tag">Tools</span>
+      </div>
+    </div>
+
+  </div>
 </div>
 
 </section>
