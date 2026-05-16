@@ -17,10 +17,13 @@ color:white;
 .hero{
 height:100vh;
 
-background:url('https://images.unsplash.com/photo-1543326727-cf6c39e8f84c?q=80&w=2070');
+background:
+linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.8)),
+url('https://images.unsplash.com/photo-1517466787929-bc90951d0974?q=80&w=2070');
 
 background-size:cover;
 background-position:center;
+background-attachment:fixed;
 
 display:flex;
 justify-content:center;
@@ -40,6 +43,7 @@ animation:glowText 3s infinite alternate;
 
 .hero p{
 font-size:25px;
+letter-spacing:1px;
 }
 
 .about{
@@ -64,15 +68,13 @@ margin-bottom:50px;
 }
 
 .card{
-background:#111;
-
-border:2px solid #39ff14;
-
-padding:30px;
-
+background:linear-gradient(145deg,#111,#1a1a1a);
+border:1px solid rgba(255,255,255,0.08);
+padding:35px;
 margin-bottom:30px;
-
-border-radius:20px;
+border-radius:24px;
+backdrop-filter:blur(10px);
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
 }
 
 .card a{
@@ -82,9 +84,9 @@ margin-top:20px;
 
 padding:10px 20px;
 
-background:#39ff14;
+background:#ff1e1e;
 
-color:black;
+color:white;
 
 text-decoration:none;
 
@@ -104,27 +106,6 @@ border-radius:10px;
   font-size:24px;
 }
 
-.signature-project{
-  border:2px solid #ff1e1e;
-  box-shadow:0 0 30px rgba(255,0,0,0.4);
-  transform:scale(1.02);
-}
-
-.signature-project h3{
-  color:#ff1e1e;
-  font-size:28px;
-}
-
-.signature-badge{
-  display:inline-block;
-  background:#ff1e1e;
-  color:white;
-  padding:8px 14px;
-  border-radius:30px;
-  font-size:12px;
-  margin-bottom:15px;
-  letter-spacing:1px;
-}
 
 .card{
   transition:0.3s ease;
@@ -132,7 +113,7 @@ border-radius:10px;
 
 .card:hover{
   transform:translateY(-8px);
-  box-shadow:0 0 20px #39ff14;
+  box-shadow:0 15px 40px rgba(255,0,0,0.25);
 }
 
   .tag{
@@ -140,9 +121,10 @@ border-radius:10px;
     padding:5px 10px;
     margin:5px 5px 0 0;
     font-size:12px;
-    border:1px solid #39ff14;
-    border-radius:8px;
-    color:#39ff14;
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:30px;
+    color:#ddd;
+    background:rgba(255,255,255,0.05);
   }
 
 /* ===== ADVANCED UI ===== */
@@ -230,18 +212,18 @@ body::before{
 }
 
 .primary-btn{
-  background:#39ff14;
-  color:black;
+  background:#ff1e1e;
+  color:white;
 }
 
 .secondary-btn{
-  border:1px solid #39ff14;
-  color:#39ff14;
+  border:1px solid rgba(255,255,255,0.3);
+  color:white;
 }
 
 .hero-buttons a:hover{
   transform:translateY(-5px);
-  box-shadow:0 0 20px #39ff14;
+  box-shadow:0 10px 25px rgba(255,0,0,0.4);
 }
 
 .contact{
@@ -259,7 +241,7 @@ body::before{
   max-width:700px;
   margin:auto;
   background:#111;
-  border:2px solid #39ff14;
+  border:1px solid rgba(255,255,255,0.1);
   padding:40px;
   border-radius:20px;
   box-shadow:0 0 20px rgba(57,255,20,0.2);
@@ -271,7 +253,7 @@ body::before{
 }
 
 .contact-box a{
-  color:#39ff14;
+  color:#ff4d4d;
   text-decoration:none;
 }
 
@@ -284,6 +266,38 @@ body::before{
 }
 
 /* Removed filter-bar styles */
+
+@media(max-width:768px){
+
+.hero h1{
+  font-size:55px;
+}
+
+.hero p{
+  font-size:18px;
+  padding:0 20px;
+}
+
+.navbar{
+  padding:15px 20px;
+}
+
+.nav-links a{
+  margin-left:12px;
+  font-size:13px;
+}
+
+.projects,
+.about,
+.contact{
+  padding:60px 25px;
+}
+
+.card{
+  padding:25px;
+}
+
+}
 
 </style>
 
@@ -336,9 +350,7 @@ Hey! I'm Ridip Giri — a passionate developer, AI enthusiast, and creative buil
   <h3>Professional Projects Portfolio</h3>
   <div class="projects-grid">
 
-    <div class="card signature-project">
-
-      <div class="signature-badge">SIGNATURE PROJECT</div>
+    <div class="card">
 
       <h3>Football Stats App</h3>
 
