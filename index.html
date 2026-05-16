@@ -31,10 +31,13 @@ text-align:center;
 }
 
 .hero h1{
-font-size:80px;
-color:#39ff14;
-
-text-shadow:0 0 20px #39ff14;
+font-size:90px;
+background:linear-gradient(90deg,#39ff14,#00e5ff,#39ff14);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+text-shadow:0 0 30px rgba(57,255,20,0.7);
+letter-spacing:4px;
+animation:glowText 3s infinite alternate;
 }
 
 .hero p{
@@ -151,6 +154,115 @@ body::before{
   to{transform:translate(100px,50px);}
 }
 
+@keyframes glowText{
+  from{
+    filter:drop-shadow(0 0 10px #39ff14);
+  }
+  to{
+    filter:drop-shadow(0 0 25px #00e5ff);
+  }
+}
+
+.navbar{
+  position:fixed;
+  top:0;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 50px;
+  background:rgba(0,0,0,0.7);
+  backdrop-filter:blur(10px);
+  z-index:1000;
+  box-sizing:border-box;
+}
+
+.nav-logo{
+  color:#39ff14;
+  font-size:24px;
+  font-weight:bold;
+}
+
+.nav-links a{
+  color:white;
+  text-decoration:none;
+  margin-left:25px;
+  transition:0.3s;
+  font-size:15px;
+}
+
+.nav-links a:hover{
+  color:#39ff14;
+}
+
+.hero-buttons{
+  margin-top:30px;
+}
+
+.hero-buttons a{
+  display:inline-block;
+  margin:10px;
+  padding:12px 24px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.primary-btn{
+  background:#39ff14;
+  color:black;
+}
+
+.secondary-btn{
+  border:1px solid #39ff14;
+  color:#39ff14;
+}
+
+.hero-buttons a:hover{
+  transform:translateY(-5px);
+  box-shadow:0 0 20px #39ff14;
+}
+
+.contact{
+  padding:80px;
+  text-align:center;
+}
+
+.contact h2{
+  color:#39ff14;
+  font-size:40px;
+  margin-bottom:20px;
+}
+
+.contact-box{
+  max-width:700px;
+  margin:auto;
+  background:#111;
+  border:2px solid #39ff14;
+  padding:40px;
+  border-radius:20px;
+  box-shadow:0 0 20px rgba(57,255,20,0.2);
+}
+
+.contact-box p{
+  margin:20px 0;
+  font-size:18px;
+}
+
+.contact-box a{
+  color:#39ff14;
+  text-decoration:none;
+}
+
+.footer{
+  text-align:center;
+  padding:30px;
+  border-top:1px solid rgba(255,255,255,0.1);
+  color:#888;
+  margin-top:50px;
+}
+
 .filter-bar{
   text-align:center;
   margin-bottom:40px;
@@ -179,28 +291,43 @@ body::before{
 
 <body>
 
+<nav class="navbar">
+  <div class="nav-logo">RIDIP GIRI</div>
+
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <a href="https://github.com/ridipgiri" target="_blank">GitHub</a>
+  </div>
+</nav>
+
 <section class="hero">
 
 <h1>RIDIP GIRI</h1>
 
 <p>
-Journalist ⚽ Builder ⚽ AI Enthusiast
+Journalist ⚽ Builder ⚽ AI Enthusiast ⚽ Developer
 </p>
+
+<div class="hero-buttons">
+  <a href="#projects" class="primary-btn">View Projects</a>
+  <a href="https://github.com/ridipgiri" target="_blank" class="secondary-btn">Visit GitHub</a>
+</div>
 
 </section>
 
-<section class="about">
+<section class="about" id="about">
 
 <h2>About Me</h2>
 
 <p>
-Hey! I build AI projects, websites,
-automation systems, and cool futuristic apps.
+Hey! I'm Ridip Giri — a passionate developer, AI enthusiast, and creative builder who loves creating futuristic applications, automation systems, modern websites, and AI-powered tools. I enjoy combining technology with creativity to build projects that feel modern, interactive, and visually powerful.
 </p>
 
 </section>
 
-<section class="projects">
+<section class="projects" id="projects">
 
 <h2>Projects</h2>
 <div class="filter-bar">
@@ -221,13 +348,43 @@ automation systems, and cool futuristic apps.
         A productivity assistant built using FastAPI,
         Neo4j, and WebSockets.
       </p>
-      <a href="https://github.com/ridipgiri">GitHub Repo</a>
+      <a href="https://github.com/ridipgiri" target="_blank">GitHub Repo</a>
 
       <div>
         <span class="tag">FastAPI</span>
         <span class="tag">Neo4j</span>
         <span class="tag">WebSockets</span>
         <span class="tag">AI</span>
+      </div>
+    </div>
+
+    <div class="card" data-category="AI">
+      <h3>Multi-Agent Graph System</h3>
+      <p>
+        An AI system powered using graph databases and intelligent multi-agent workflows.
+      </p>
+      <a href="https://github.com/ridipgiri" target="_blank">Open Project</a>
+
+      <div>
+        <span class="tag">Agents</span>
+        <span class="tag">Graph DB</span>
+        <span class="tag">Neo4j</span>
+        <span class="tag">Python</span>
+      </div>
+    </div>
+
+    <div class="card" data-category="AI">
+      <h3>AI Observability Dashboard</h3>
+      <p>
+        Advanced observability and monitoring dashboard for AI workflows and agents.
+      </p>
+      <a href="https://github.com/ridipgiri" target="_blank">Open Project</a>
+
+      <div>
+        <span class="tag">Observability</span>
+        <span class="tag">LLM</span>
+        <span class="tag">Dashboards</span>
+        <span class="tag">Analytics</span>
       </div>
     </div>
 
@@ -244,12 +401,27 @@ automation systems, and cool futuristic apps.
       <p>
         A personal portfolio website built using HTML and CSS.
       </p>
-      <a href="https://github.com/ridipgiri">GitHub Repo</a>
+      <a href="https://github.com/ridipgiri" target="_blank">GitHub Repo</a>
 
       <div>
         <span class="tag">HTML</span>
         <span class="tag">CSS</span>
         <span class="tag">Portfolio</span>
+      </div>
+    </div>
+
+    <div class="card" data-category="Web">
+      <h3>Advanced GitHub Portfolio</h3>
+      <p>
+        A futuristic responsive portfolio website with advanced UI animations and project filtering.
+      </p>
+      <a href="https://github.com/ridipgiri/ridipgiri.github.io" target="_blank">Open Project</a>
+
+      <div>
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">UI/UX</span>
+        <span class="tag">Responsive</span>
       </div>
     </div>
 
@@ -266,7 +438,7 @@ automation systems, and cool futuristic apps.
       <p>
         Scripts and tools for automating daily tasks.
       </p>
-      <a href="https://github.com/ridipgiri">GitHub Repo</a>
+      <a href="https://github.com/ridipgiri" target="_blank">GitHub Repo</a>
 
       <div>
         <span class="tag">Python</span>
@@ -276,10 +448,49 @@ automation systems, and cool futuristic apps.
       </div>
     </div>
 
+    <div class="card" data-category="Automation">
+      <h3>Workflow Automation Tools</h3>
+      <p>
+        Smart automation tools for productivity, reminders, notifications, and scheduling systems.
+      </p>
+      <a href="https://github.com/ridipgiri" target="_blank">Open Project</a>
+
+      <div>
+        <span class="tag">Automation</span>
+        <span class="tag">Python</span>
+        <span class="tag">Workflows</span>
+        <span class="tag">Productivity</span>
+      </div>
+    </div>
+
   </div>
 </div>
 
  </section>
+
+<section class="contact" id="contact">
+
+<h2>Contact Me</h2>
+
+<div class="contact-box">
+  <p>
+    📧 Email: <a href="mailto:acethe456@gmail.com">acethe456@gmail.com</a>
+  </p>
+
+  <p>
+    💻 GitHub: <a href="https://github.com/ridipgiri" target="_blank">github.com/ridipgiri</a>
+  </p>
+
+  <p>
+    🚀 Open to collaborations, AI projects, web development, and futuristic tech ideas.
+  </p>
+</div>
+
+</section>
+
+<footer class="footer">
+  © 2026 Ridip Giri • Built with HTML & CSS
+</footer>
 
 <script>
 function filterProjects(category){
@@ -293,11 +504,22 @@ function filterProjects(category){
   cards.forEach(card => {
     if(category === 'all' || card.dataset.category === category){
       card.style.display = 'block';
+      card.style.animation = 'fadeIn 0.5s ease';
     } else {
       card.style.display = 'none';
     }
   });
 }
+
+window.addEventListener('scroll', () => {
+  const navbar = document.querySelector('.navbar');
+
+  if(window.scrollY > 50){
+    navbar.style.background = 'rgba(0,0,0,0.9)';
+  } else {
+    navbar.style.background = 'rgba(0,0,0,0.7)';
+  }
+});
 </script>
 
 </body>
