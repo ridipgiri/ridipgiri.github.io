@@ -91,6 +91,14 @@ color:white;
 text-decoration:none;
 
 border-radius:10px;
+font-weight:bold;
+letter-spacing:0.5px;
+transition:0.3s ease;
+}
+
+.card a:hover{
+  transform:translateY(-2px);
+  background:#ff3333;
 }
 
 .projects-grid{
@@ -106,6 +114,40 @@ border-radius:10px;
   font-size:24px;
 }
 
+.featured-card{
+  position:relative;
+  overflow:hidden;
+  border:1px solid rgba(255,0,0,0.4);
+  box-shadow:
+    0 0 25px rgba(255,0,0,0.25),
+    0 0 60px rgba(255,0,0,0.12);
+}
+
+.featured-card::before{
+  content:"";
+  position:absolute;
+  top:-50%;
+  left:-50%;
+  width:200%;
+  height:200%;
+  background:linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.08),
+    transparent
+  );
+  transform:rotate(25deg);
+  animation:shine 5s linear infinite;
+}
+
+@keyframes shine{
+  from{
+    transform:translateX(-100%) rotate(25deg);
+  }
+  to{
+    transform:translateX(100%) rotate(25deg);
+  }
+}
 
 .card{
   transition:0.3s ease;
@@ -113,7 +155,7 @@ border-radius:10px;
 
 .card:hover{
   transform:translateY(-8px);
-  box-shadow:0 15px 40px rgba(255,0,0,0.25);
+  box-shadow:0 20px 55px rgba(255,0,0,0.35);
 }
 
   .tag{
@@ -350,7 +392,7 @@ Hey! I'm Ridip Giri — a passionate developer, AI enthusiast, and creative buil
   <h3>Professional Projects Portfolio</h3>
   <div class="projects-grid">
 
-    <div class="card">
+    <div class="card featured-card">
 
       <h3>Football Stats App</h3>
 
@@ -358,7 +400,7 @@ Hey! I'm Ridip Giri — a passionate developer, AI enthusiast, and creative buil
         A modern football analytics and statistics platform designed to track matches, player performance, club analytics, and live football insights with a professional sports-inspired interface.
       </p>
 
-      <a href="https://github.com/ridipgiri/football-stats-app" target="_blank">View Signature Project</a>
+      <a href="https://github.com/ridipgiri/football-stats-app" target="_blank">Open Project</a>
 
       <div>
         <span class="tag">Football</span>
