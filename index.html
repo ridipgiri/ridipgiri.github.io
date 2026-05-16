@@ -18,8 +18,8 @@ color:white;
 height:100vh;
 
 background:
-linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.8)),
-url('https://images.unsplash.com/photo-1517466787929-bc90951d0974?q=80&w=2070');
+linear-gradient(rgba(5,5,10,0.75), rgba(0,0,0,0.88)),
+url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2070');
 
 background-size:cover;
 background-position:center;
@@ -31,19 +31,60 @@ align-items:center;
 flex-direction:column;
 
 text-align:center;
+position:relative;
+overflow:hidden;
 }
 
 .hero h1{
-font-size:90px;
+font-size:88px;
 color:#ff1e1e;
 text-shadow:0 0 30px rgba(255,0,0,0.8);
 letter-spacing:4px;
+font-weight:800;
+text-transform:uppercase;
 animation:glowText 3s infinite alternate;
 }
 
 .hero p{
-font-size:25px;
+font-size:22px;
 letter-spacing:1px;
+color:#d6d6d6;
+line-height:1.7;
+}
+
+.japanese-text{
+position:absolute;
+font-size:120px;
+font-weight:bold;
+color:rgba(255,255,255,0.04);
+letter-spacing:12px;
+user-select:none;
+pointer-events:none;
+text-transform:uppercase;
+}
+
+.japanese-top{
+top:120px;
+left:60px;
+}
+
+.japanese-bottom{
+bottom:80px;
+right:60px;
+}
+
+.hero-overlay{
+position:absolute;
+inset:0;
+background:linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.7));
+z-index:0;
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:900px;
+padding:20px;
 }
 
 .about{
@@ -52,7 +93,7 @@ text-align:center;
 }
 
 .about h2{
-color:#39ff14;
+color:#ff1e1e;
 font-size:40px;
 }
 
@@ -188,7 +229,7 @@ body::before{
   left:-50%;
   width:200%;
   height:200%;
-  background:radial-gradient(circle, rgba(57,255,20,0.08), transparent 40%);
+  background:radial-gradient(circle, rgba(255,0,0,0.06), transparent 40%);
   animation:floatGlow 8s infinite alternate;
   pointer-events:none;
 }
@@ -200,10 +241,10 @@ body::before{
 
 @keyframes glowText{
   from{
-    filter:drop-shadow(0 0 10px #39ff14);
+    filter:drop-shadow(0 0 8px rgba(255,0,0,0.5));
   }
   to{
-    filter:drop-shadow(0 0 25px #00e5ff);
+    filter:drop-shadow(0 0 22px rgba(255,0,0,0.9));
   }
 }
 
@@ -215,7 +256,7 @@ body::before{
   justify-content:space-between;
   align-items:center;
   padding:20px 50px;
-  background:rgba(0,0,0,0.7);
+  background:rgba(10,10,15,0.78);
   backdrop-filter:blur(10px);
   z-index:1000;
   box-sizing:border-box;
@@ -236,7 +277,7 @@ body::before{
 }
 
 .nav-links a:hover{
-  color:#39ff14;
+  color:#ff4d4d;
 }
 
 .hero-buttons{
@@ -274,7 +315,7 @@ body::before{
 }
 
 .contact h2{
-  color:#39ff14;
+  color:#ff1e1e;
   font-size:40px;
   margin-bottom:20px;
 }
@@ -315,9 +356,18 @@ body::before{
   font-size:55px;
 }
 
-.hero p{
-  font-size:18px;
-  padding:0 20px;
+.japanese-text{
+  font-size:60px;
+}
+
+.japanese-top{
+  left:20px;
+  top:140px;
+}
+
+.japanese-bottom{
+  right:20px;
+  bottom:120px;
 }
 
 .navbar{
@@ -360,15 +410,24 @@ body::before{
 
 <section class="hero">
 
+<div class="hero-overlay"></div>
+
+<div class="japanese-text japanese-top">未来</div>
+<div class="japanese-text japanese-bottom">創造</div>
+
+<div class="hero-content">
+
 <h1>RIDIP GIRI</h1>
 
 <p>
-Journalist ⚽ Builder ⚽ AI Enthusiast ⚽ Developer
+Developer ⚽ AI Enthusiast ⚽ Creative Builder ⚽ Modern Digital Experiences
 </p>
 
 <div class="hero-buttons">
   <a href="#projects" class="primary-btn">View Projects</a>
   <a href="https://github.com/ridipgiri" target="_blank" class="secondary-btn">Visit GitHub</a>
+</div>
+
 </div>
 
 </section>
