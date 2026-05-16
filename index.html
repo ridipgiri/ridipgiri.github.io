@@ -17,7 +17,7 @@ color:white;
 .hero{
 height:100vh;
 
-background:url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=2070');
+background:url('https://images.unsplash.com/photo-1543326727-cf6c39e8f84c?q=80&w=2070');
 
 background-size:cover;
 background-position:center;
@@ -32,10 +32,8 @@ text-align:center;
 
 .hero h1{
 font-size:90px;
-background:linear-gradient(90deg,#39ff14,#00e5ff,#39ff14);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-text-shadow:0 0 30px rgba(57,255,20,0.7);
+color:#ff1e1e;
+text-shadow:0 0 30px rgba(255,0,0,0.8);
 letter-spacing:4px;
 animation:glowText 3s infinite alternate;
 }
@@ -60,7 +58,7 @@ padding:80px;
 
 .projects h2{
 text-align:center;
-color:#39ff14;
+color:#ff1e1e;
 font-size:40px;
 margin-bottom:50px;
 }
@@ -100,10 +98,32 @@ border-radius:10px;
 }
 
 .project-section h3{
-  color:#39ff14;
+  color:#ff1e1e;
   text-align:center;
   margin-top:50px;
   font-size:24px;
+}
+
+.signature-project{
+  border:2px solid #ff1e1e;
+  box-shadow:0 0 30px rgba(255,0,0,0.4);
+  transform:scale(1.02);
+}
+
+.signature-project h3{
+  color:#ff1e1e;
+  font-size:28px;
+}
+
+.signature-badge{
+  display:inline-block;
+  background:#ff1e1e;
+  color:white;
+  padding:8px 14px;
+  border-radius:30px;
+  font-size:12px;
+  margin-bottom:15px;
+  letter-spacing:1px;
 }
 
 .card{
@@ -178,7 +198,7 @@ body::before{
 }
 
 .nav-logo{
-  color:#39ff14;
+  color:#ff1e1e;
   font-size:24px;
   font-weight:bold;
 }
@@ -263,27 +283,7 @@ body::before{
   margin-top:50px;
 }
 
-.filter-bar{
-  text-align:center;
-  margin-bottom:40px;
-}
-
-.filter-btn{
-  background:transparent;
-  border:1px solid #39ff14;
-  color:#39ff14;
-  padding:10px 15px;
-  margin:5px;
-  cursor:pointer;
-  border-radius:8px;
-  transition:0.3s;
-}
-
-.filter-btn:hover,
-.filter-btn.active{
-  background:#39ff14;
-  color:black;
-}
+/* Removed filter-bar styles */
 
 </style>
 
@@ -330,136 +330,94 @@ Hey! I'm Ridip Giri — a passionate developer, AI enthusiast, and creative buil
 <section class="projects" id="projects">
 
 <h2>Projects</h2>
-<div class="filter-bar">
-  <button class="filter-btn active" onclick="filterProjects('all')">All</button>
-  <button class="filter-btn" onclick="filterProjects('AI')">AI</button>
-  <button class="filter-btn" onclick="filterProjects('Web')">Web</button>
-  <button class="filter-btn" onclick="filterProjects('Automation')">Automation</button>
-</div>
 
 <div class="project-section">
 
-  <h3>AI Projects</h3>
+  <h3>Professional Projects Portfolio</h3>
   <div class="projects-grid">
 
-    <div class="card" data-category="AI">
-      <h3>AI Productivity Assistant</h3>
+    <div class="card signature-project">
+
+      <div class="signature-badge">SIGNATURE PROJECT</div>
+
+      <h3>Football Stats App</h3>
+
       <p>
-        A productivity assistant built using FastAPI,
-        Neo4j, and WebSockets.
+        A modern football analytics and statistics platform designed to track matches, player performance, club analytics, and live football insights with a professional sports-inspired interface.
       </p>
-      <a href="https://github.com/ridipgiri" target="_blank">GitHub Repo</a>
+
+      <a href="https://github.com/ridipgiri/football-stats-app" target="_blank">View Signature Project</a>
 
       <div>
-        <span class="tag">FastAPI</span>
-        <span class="tag">Neo4j</span>
-        <span class="tag">WebSockets</span>
-        <span class="tag">AI</span>
-      </div>
-    </div>
-
-    <div class="card" data-category="AI">
-      <h3>Multi-Agent Graph System</h3>
-      <p>
-        An AI system powered using graph databases and intelligent multi-agent workflows.
-      </p>
-      <a href="https://github.com/ridipgiri" target="_blank">Open Project</a>
-
-      <div>
-        <span class="tag">Agents</span>
-        <span class="tag">Graph DB</span>
-        <span class="tag">Neo4j</span>
-        <span class="tag">Python</span>
-      </div>
-    </div>
-
-    <div class="card" data-category="AI">
-      <h3>AI Observability Dashboard</h3>
-      <p>
-        Advanced observability and monitoring dashboard for AI workflows and agents.
-      </p>
-      <a href="https://github.com/ridipgiri" target="_blank">Open Project</a>
-
-      <div>
-        <span class="tag">Observability</span>
-        <span class="tag">LLM</span>
-        <span class="tag">Dashboards</span>
+        <span class="tag">Football</span>
         <span class="tag">Analytics</span>
+        <span class="tag">Sports Tech</span>
+        <span class="tag">Dashboard</span>
+      </div>
+
+    </div>
+
+    <div class="card">
+      <h3>Translation App</h3>
+
+      <p>
+        A multilingual translation application focused on seamless communication and modern user experience.
+      </p>
+
+      <a href="https://github.com/ridipgiri/translastion-" target="_blank">Open Project</a>
+
+      <div>
+        <span class="tag">Translation</span>
+        <span class="tag">Language</span>
+        <span class="tag">Web App</span>
       </div>
     </div>
 
-  </div>
-</div>
+    <div class="card">
+      <h3>Travel Planner App</h3>
 
-<div class="project-section">
-
-  <h3>Web Projects</h3>
-  <div class="projects-grid">
-
-    <div class="card" data-category="Web">
-      <h3>Portfolio Website</h3>
       <p>
-        A personal portfolio website built using HTML and CSS.
+        A smart travel planning platform designed to help users organize trips, destinations, schedules, and travel experiences efficiently.
       </p>
-      <a href="https://github.com/ridipgiri" target="_blank">GitHub Repo</a>
+
+      <a href="https://github.com/ridipgiri/travel-planner-app" target="_blank">Open Project</a>
 
       <div>
-        <span class="tag">HTML</span>
-        <span class="tag">CSS</span>
-        <span class="tag">Portfolio</span>
-      </div>
-    </div>
-
-    <div class="card" data-category="Web">
-      <h3>Advanced GitHub Portfolio</h3>
-      <p>
-        A futuristic responsive portfolio website with advanced UI animations and project filtering.
-      </p>
-      <a href="https://github.com/ridipgiri/ridipgiri.github.io" target="_blank">Open Project</a>
-
-      <div>
-        <span class="tag">HTML</span>
-        <span class="tag">CSS</span>
-        <span class="tag">UI/UX</span>
-        <span class="tag">Responsive</span>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-<div class="project-section">
-
-  <h3>Automation Projects</h3>
-  <div class="projects-grid">
-
-    <div class="card" data-category="Automation">
-      <h3>Automation System</h3>
-      <p>
-        Scripts and tools for automating daily tasks.
-      </p>
-      <a href="https://github.com/ridipgiri" target="_blank">GitHub Repo</a>
-
-      <div>
-        <span class="tag">Python</span>
-        <span class="tag">Automation</span>
-        <span class="tag">Scripts</span>
-        <span class="tag">Tools</span>
-      </div>
-    </div>
-
-    <div class="card" data-category="Automation">
-      <h3>Workflow Automation Tools</h3>
-      <p>
-        Smart automation tools for productivity, reminders, notifications, and scheduling systems.
-      </p>
-      <a href="https://github.com/ridipgiri" target="_blank">Open Project</a>
-
-      <div>
-        <span class="tag">Automation</span>
-        <span class="tag">Python</span>
-        <span class="tag">Workflows</span>
+        <span class="tag">Travel</span>
+        <span class="tag">Planner</span>
         <span class="tag">Productivity</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Dhurandhar Project</h3>
+
+      <p>
+        A professional project showcasing scalable application architecture and modern development practices.
+      </p>
+
+      <a href="https://github.com/ridipgiri/dhurandhar-project" target="_blank">Open Project</a>
+
+      <div>
+        <span class="tag">Professional</span>
+        <span class="tag">Development</span>
+        <span class="tag">Architecture</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Sample Repository</h3>
+
+      <p>
+        A repository containing development experiments, testing workflows, and foundational implementation structures.
+      </p>
+
+      <a href="https://github.com/ridipgiri/sample-repo" target="_blank">Open Project</a>
+
+      <div>
+        <span class="tag">Testing</span>
+        <span class="tag">Development</span>
+        <span class="tag">Repository</span>
       </div>
     </div>
 
@@ -470,7 +428,7 @@ Hey! I'm Ridip Giri — a passionate developer, AI enthusiast, and creative buil
 
 <section class="contact" id="contact">
 
-<h2>Contact Me</h2>
+<h2>Professional Contact</h2>
 
 <div class="contact-box">
   <p>
@@ -489,28 +447,10 @@ Hey! I'm Ridip Giri — a passionate developer, AI enthusiast, and creative buil
 </section>
 
 <footer class="footer">
-  © 2026 Ridip Giri • Built with HTML & CSS
+  © 2026 Ridip Giri • Professional Portfolio • Built for Innovation
 </footer>
 
 <script>
-function filterProjects(category){
-  let cards = document.querySelectorAll('.card');
-  let buttons = document.querySelectorAll('.filter-btn');
-
-  buttons.forEach(btn => btn.classList.remove('active'));
-
-  event.target.classList.add('active');
-
-  cards.forEach(card => {
-    if(category === 'all' || card.dataset.category === category){
-      card.style.display = 'block';
-      card.style.animation = 'fadeIn 0.5s ease';
-    } else {
-      card.style.display = 'none';
-    }
-  });
-}
-
 window.addEventListener('scroll', () => {
   const navbar = document.querySelector('.navbar');
 
