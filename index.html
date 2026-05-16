@@ -2,6 +2,9 @@
 <html>
 
 <head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <title>Ridip Giri Portfolio</title>
 
@@ -9,47 +12,46 @@
 
 body{
 margin:0;
-font-family:Arial;
-background:black;
+font-family:'Inter', Arial, sans-serif;
+background:#050505;
 color:white;
+overflow-x:hidden;
 }
 
 .hero{
 height:100vh;
-
 background:
-linear-gradient(rgba(5,5,10,0.75), rgba(0,0,0,0.88)),
-url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2070');
-
+linear-gradient(rgba(4,4,8,0.75), rgba(0,0,0,0.88)),
+url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=2070');
 background-size:cover;
 background-position:center;
 background-attachment:fixed;
-
 display:flex;
 justify-content:center;
 align-items:center;
 flex-direction:column;
-
 text-align:center;
 position:relative;
 overflow:hidden;
 }
 
 .hero h1{
-font-size:88px;
-color:#ff1e1e;
-text-shadow:0 0 30px rgba(255,0,0,0.8);
-letter-spacing:4px;
+font-size:100px;
 font-weight:800;
+letter-spacing:10px;
 text-transform:uppercase;
-animation:glowText 3s infinite alternate;
+color:white;
+margin-bottom:15px;
+text-shadow:0 0 30px rgba(255,255,255,0.08);
 }
 
 .hero p{
-font-size:22px;
-letter-spacing:1px;
-color:#d6d6d6;
-line-height:1.7;
+font-size:20px;
+letter-spacing:3px;
+color:#c2c2c2;
+line-height:1.9;
+font-weight:500;
+text-transform:uppercase;
 }
 
 .japanese-text{
@@ -88,34 +90,52 @@ padding:20px;
 }
 
 .about{
-padding:80px;
+padding:120px 80px;
 text-align:center;
+background:#09090d;
 }
 
 .about h2{
-color:#ff1e1e;
-font-size:40px;
+color:white;
+font-size:52px;
+letter-spacing:6px;
+text-transform:uppercase;
+margin-bottom:30px;
+}
+
+.about p{
+max-width:900px;
+margin:auto;
+font-size:18px;
+line-height:2;
+color:#bcbcbc;
 }
 
 .projects{
-padding:80px;
+padding:120px 80px;
+background:linear-gradient(to bottom,#050505,#0d0d12);
 }
 
 .projects h2{
 text-align:center;
-color:#ff1e1e;
-font-size:40px;
-margin-bottom:50px;
+color:white;
+font-size:52px;
+margin-bottom:70px;
+letter-spacing:6px;
+text-transform:uppercase;
 }
 
 .card{
-background:linear-gradient(145deg,#111,#1a1a1a);
-border:1px solid rgba(255,255,255,0.08);
-padding:35px;
+background:linear-gradient(145deg,#0f0f14,#17171f);
+border:1px solid rgba(255,255,255,0.06);
+padding:40px;
 margin-bottom:30px;
-border-radius:24px;
-backdrop-filter:blur(10px);
-box-shadow:0 10px 30px rgba(0,0,0,0.4);
+border-radius:30px;
+backdrop-filter:blur(18px);
+box-shadow:0 20px 50px rgba(0,0,0,0.35);
+transition:0.4s ease;
+position:relative;
+overflow:hidden;
 }
 
 .card a{
@@ -149,19 +169,24 @@ transition:0.3s ease;
 }
 
 .project-section h3{
-  color:#ff1e1e;
-  text-align:center;
-  margin-top:50px;
-  font-size:24px;
+color:#d7d7d7;
+text-align:center;
+margin-top:20px;
+margin-bottom:50px;
+font-size:18px;
+letter-spacing:4px;
+text-transform:uppercase;
+font-weight:600;
 }
 
 .featured-card{
-  position:relative;
-  overflow:hidden;
-  border:1px solid rgba(255,0,0,0.4);
-  box-shadow:
-    0 0 25px rgba(255,0,0,0.25),
-    0 0 60px rgba(255,0,0,0.12);
+background:
+linear-gradient(rgba(255,255,255,0.03), rgba(255,255,255,0.01)),
+linear-gradient(145deg,#121218,#1a1a24);
+border:1px solid rgba(255,255,255,0.12);
+box-shadow:
+0 0 30px rgba(255,255,255,0.04),
+0 0 80px rgba(255,255,255,0.03);
 }
 
 .featured-card::before{
@@ -195,20 +220,23 @@ transition:0.3s ease;
 }
 
 .card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 20px 55px rgba(255,0,0,0.35);
+transform:translateY(-10px);
+box-shadow:0 25px 60px rgba(255,255,255,0.08);
+border:1px solid rgba(255,255,255,0.12);
 }
 
   .tag{
-    display:inline-block;
-    padding:5px 10px;
-    margin:5px 5px 0 0;
-    font-size:12px;
-    border:1px solid rgba(255,255,255,0.15);
-    border-radius:30px;
-    color:#ddd;
-    background:rgba(255,255,255,0.05);
-  }
+display:inline-block;
+padding:7px 14px;
+margin:6px 6px 0 0;
+font-size:11px;
+letter-spacing:1px;
+border:1px solid rgba(255,255,255,0.12);
+border-radius:40px;
+color:#d7d7d7;
+background:rgba(255,255,255,0.04);
+text-transform:uppercase;
+}
 
 /* ===== ADVANCED UI ===== */
 
@@ -249,35 +277,39 @@ body::before{
 }
 
 .navbar{
-  position:fixed;
-  top:0;
-  width:100%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:20px 50px;
-  background:rgba(10,10,15,0.78);
-  backdrop-filter:blur(10px);
-  z-index:1000;
-  box-sizing:border-box;
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:22px 60px;
+background:rgba(8,8,12,0.72);
+backdrop-filter:blur(20px);
+border-bottom:1px solid rgba(255,255,255,0.06);
+z-index:1000;
+box-sizing:border-box;
 }
 
 .nav-logo{
-  color:#ff1e1e;
-  font-size:24px;
-  font-weight:bold;
+color:white;
+font-size:22px;
+font-weight:800;
+letter-spacing:5px;
 }
 
 .nav-links a{
-  color:white;
-  text-decoration:none;
-  margin-left:25px;
-  transition:0.3s;
-  font-size:15px;
+color:#cfcfcf;
+text-decoration:none;
+margin-left:28px;
+transition:0.35s ease;
+font-size:13px;
+letter-spacing:2px;
+text-transform:uppercase;
 }
 
 .nav-links a:hover{
-  color:#ff4d4d;
+color:white;
 }
 
 .hero-buttons{
@@ -285,49 +317,57 @@ body::before{
 }
 
 .hero-buttons a{
-  display:inline-block;
-  margin:10px;
-  padding:12px 24px;
-  border-radius:10px;
-  text-decoration:none;
-  font-weight:bold;
-  transition:0.3s;
+display:inline-block;
+margin:12px;
+padding:15px 30px;
+border-radius:18px;
+text-decoration:none;
+font-weight:600;
+transition:0.35s ease;
+letter-spacing:1px;
+font-size:14px;
+text-transform:uppercase;
 }
 
 .primary-btn{
-  background:#ff1e1e;
-  color:white;
+background:white;
+color:black;
+box-shadow:0 10px 35px rgba(255,255,255,0.15);
 }
 
 .secondary-btn{
-  border:1px solid rgba(255,255,255,0.3);
-  color:white;
+border:1px solid rgba(255,255,255,0.15);
+color:white;
+background:rgba(255,255,255,0.03);
 }
 
 .hero-buttons a:hover{
-  transform:translateY(-5px);
-  box-shadow:0 10px 25px rgba(255,0,0,0.4);
+transform:translateY(-6px);
+box-shadow:0 15px 40px rgba(255,255,255,0.12);
 }
 
 .contact{
-  padding:80px;
-  text-align:center;
+padding:120px 80px;
+text-align:center;
+background:#050505;
 }
 
 .contact h2{
-  color:#ff1e1e;
-  font-size:40px;
-  margin-bottom:20px;
+color:white;
+font-size:52px;
+margin-bottom:30px;
+letter-spacing:6px;
+text-transform:uppercase;
 }
 
 .contact-box{
-  max-width:700px;
-  margin:auto;
-  background:#111;
-  border:1px solid rgba(255,255,255,0.1);
-  padding:40px;
-  border-radius:20px;
-  box-shadow:0 0 20px rgba(57,255,20,0.2);
+max-width:760px;
+margin:auto;
+background:linear-gradient(145deg,#101014,#181820);
+border:1px solid rgba(255,255,255,0.08);
+padding:50px;
+border-radius:30px;
+box-shadow:0 20px 50px rgba(0,0,0,0.4);
 }
 
 .contact-box p{
@@ -336,16 +376,19 @@ body::before{
 }
 
 .contact-box a{
-  color:#ff4d4d;
-  text-decoration:none;
+color:white;
+text-decoration:none;
 }
 
 .footer{
-  text-align:center;
-  padding:30px;
-  border-top:1px solid rgba(255,255,255,0.1);
-  color:#888;
-  margin-top:50px;
+text-align:center;
+padding:40px;
+border-top:1px solid rgba(255,255,255,0.06);
+color:#777;
+letter-spacing:2px;
+font-size:12px;
+text-transform:uppercase;
+background:#040404;
 }
 
 /* Removed filter-bar styles */
@@ -353,7 +396,7 @@ body::before{
 @media(max-width:768px){
 
 .hero h1{
-  font-size:55px;
+  font-size:60px;
 }
 
 .japanese-text{
@@ -385,8 +428,15 @@ body::before{
   padding:60px 25px;
 }
 
-.card{
-  padding:25px;
+.hero p{
+font-size:14px;
+letter-spacing:2px;
+}
+
+.projects h2,
+.about h2,
+.contact h2{
+font-size:34px;
 }
 
 }
@@ -412,15 +462,15 @@ body::before{
 
 <div class="hero-overlay"></div>
 
-<div class="japanese-text japanese-top">未来</div>
-<div class="japanese-text japanese-bottom">創造</div>
+<div class="japanese-text japanese-top">東京</div>
+<div class="japanese-text japanese-bottom">静寂</div>
 
 <div class="hero-content">
 
 <h1>RIDIP GIRI</h1>
 
 <p>
-Developer ⚽ AI Enthusiast ⚽ Creative Builder ⚽ Modern Digital Experiences
+Minimal Interfaces ⚽ AI Systems ⚽ Futuristic Experiences ⚽ Digital Craftsmanship
 </p>
 
 <div class="hero-buttons">
@@ -437,7 +487,7 @@ Developer ⚽ AI Enthusiast ⚽ Creative Builder ⚽ Modern Digital Experiences
 <h2>About Me</h2>
 
 <p>
-Hey! I'm Ridip Giri — a passionate developer, AI enthusiast, and creative builder who loves creating futuristic applications, automation systems, modern websites, and AI-powered tools. I enjoy combining technology with creativity to build projects that feel modern, interactive, and visually powerful.
+Ridip Giri is a developer focused on building modern digital experiences, football-tech platforms, AI systems, and minimal futuristic interfaces. Inspired by Tokyo aesthetics and luxury product design, his work combines technology, simplicity, and cinematic visual storytelling.
 </p>
 
 </section>
@@ -541,7 +591,7 @@ Hey! I'm Ridip Giri — a passionate developer, AI enthusiast, and creative buil
 
 <section class="contact" id="contact">
 
-<h2>Professional Contact</h2>
+<h2>Connect</h2>
 
 <div class="contact-box">
   <p>
@@ -560,7 +610,7 @@ Hey! I'm Ridip Giri — a passionate developer, AI enthusiast, and creative buil
 </section>
 
 <footer class="footer">
-  © 2026 Ridip Giri • Professional Portfolio • Built for Innovation
+  © 2026 RIDIP GIRI • TOKYO MINIMAL PORTFOLIO
 </footer>
 
 <script>
